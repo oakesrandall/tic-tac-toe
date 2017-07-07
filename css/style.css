@@ -2,6 +2,12 @@
 	font-family: 'Permanent Marker', cursive;
 }
 
+#winner {
+	position: fixed;
+	right: 35%;
+	display: none;
+}
+
 body {
 	margin: 40px;
 }
