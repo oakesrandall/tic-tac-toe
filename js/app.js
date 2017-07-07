@@ -23,6 +23,7 @@ function startNewGame() {
 		temp[i].innerHTML = "";
 	}
 	removeNoClick();
+	removeBrad();
 }
 
 //runs the startNewGame function after page loads
@@ -45,7 +46,14 @@ document.getElementById("resetButton").addEventListener("click", function() {
 	startNewGame();
 });
 
+function showBrad() {
+	document.getElementById("winner").setAttribute("style", "display: block");
 
+}
+
+function removeBrad() {
+	document.getElementById("winner").setAttribute("style", "display: none");
+}
 //captures the value (ID) of the square that was clicked
 //makes the clicked square unclickable
 
@@ -56,8 +64,11 @@ function replyClick(clickedId) {
 	numberOfTurns += 1;
 	setTimeout(function() {
     	if (hasWon(score[currentPlayer])) {
-			alert(currentPlayer.toUpperCase() + " wins!!! Click OK to start another game.");
-			startNewGame();
+    		showBrad();
+    		setTimeout(function() {
+				alert(currentPlayer.toUpperCase() + " wins!!! Click OK to start another game.");
+				startNewGame();
+			}, 4000);
 		}
 		else if (numberOfTurns === 9) {
 			alert("The game is a draw! Click OK to start another game.");
@@ -67,6 +78,8 @@ function replyClick(clickedId) {
 		}
 	}, 100);
 }
+
+
 
 function hasWon(score) {
       for (var i = 0; i < winningNumbers.length; i++) {
