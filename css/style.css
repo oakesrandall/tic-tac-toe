@@ -1,0 +1,68 @@
+* {
+	font-family: 'Permanent Marker', cursive;
+}
+
+body {
+	margin: 40px;
+}
+
+#title {
+	text-align: center;
+	font-size: 75px;
+}
+
+div.gridContainer {
+
+	width: 620px;
+	height: 620px;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat (6, 200px);
+	grid-template-rows: 200px 200px 200px;
+	grid-auto-flow: column;
+	font-size: 100%;
+	margin: -45px auto 0 auto;
+	background-color: black;
+}
+
+.box {
+	background-color: #fff;
+	color: black;
+	border-radius: 5px;
+	padding: none;
+	width: 200px;
+	height: 200px;
+}
+
+p {
+	margin: auto;
+	text-align: center;
+	line-height: 165px;
+	font-size: 125px;
+
+}
+
+#resetButton {
+	height: 40px;
+	width: 200px;
+	margin: 30px auto 0 auto;
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+#buttonContainer {
+	text-align: center;
+}
+
+.avoidClicks {
+	pointer-events: none;
+}
+
+
+
+
+
+
+
